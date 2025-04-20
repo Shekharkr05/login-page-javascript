@@ -1,2 +1,2 @@
 # login-page-javascript
-browser login page htm l, css &amp; javascript
+browser login page html, css &amp; javascript
