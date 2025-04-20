@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('https://wallpapers.com/images/featured/avengers-vm16xv4a69smdauy.jpg');
+            background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .login-container {
+      background: rgba(0, 0, 0, 0.77);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 360px;
+      opacity: 1;
+    }
+    .login-container h2 {
+      margin-bottom: 1.5rem;
+      text-align: center;
+      color: #333;
+    }
+    .login-container input[type="text"],
+    .login-container input[type="password"] {
+      width: 100%;
+      padding: 0.75rem;
+      margin: 0.5rem 0 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    .login-container button {
+      width: 100%;
+      padding: 0.75rem;
+      background-color: #007bff;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .login-container button:hover {
+      background-color: #0056b3;
+    }
+    .message {
+      margin-top: 1rem;
+      text-align: center;
+      color: red;
+    }
+    #a{
+        color: aqua;
+    }
+  </style>
+</head>
+<body>
+   
+  <div class="login-container">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <p id="a">USER NAME = shekhar</p><br>
+  <p id="a">PASSWORD = password</p>
+
+    <div class="message" id="message"></div>
+  </div>
+  
+
+  <script>
+    function login() {
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+      const messageDiv = document.getElementById("message");
+
+      // Simple validation logic (replace with real authentication logic)
+      if (username === "shekhar" && password === "password") {
+        messageDiv.style.color = 'green';
+        messageDiv.textContent = "Login successful!";
+      } else {
+        messageDiv.style.color = 'red';
+        messageDiv.textContent = "Invalid username or password.";
+      }
+      
+    }
+  </script>
+  
+</body>
+</html>
